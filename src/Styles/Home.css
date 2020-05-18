@@ -1,0 +1,49 @@
+body {
+  background-color: #14bdac;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    grid-template-rows: 0.7fr repeat(2, 1fr 0.3fr) 1.2fr 1fr 90vw 0.6fr 0.6fr 1.2fr 1fr 0.6fr;
+    gap: 1px 1px;
+    grid-template-areas: ". . ." "playerSymbol playerSymbol playerSymbol" ". . ." "opponentsNickname opponentsNickname opponentsNickname" ". . ." "board board board" "board board board" ". . ." "whoseTurn whoseTurn whoseTurn" ". . ." "score score score" ". . ." "gameId gameId gameId";
+
+    width: 95vw;
+    height: 90vh;
+    justify-items: center;
+  }
+
+  .board {
+    grid-area: board;
+  }
+  .board td {
+    width: 30vw;
+    height: 30vw;
+    border: 1.5px solid white;
+    padding: 0;
+  }
+  .board table {
+    border-spacing: 0px;
+  }
+  .score {
+    grid-area: score;
+  }
+
+  .playerSymbol {
+    grid-area: playerSymbol;
+  }
+
+  .gameId {
+    grid-area: gameId;
+  }
+
+  .opponentsNickname {
+    grid-area: opponentsNickname;
+  }
+
+  .whoseTurn {
+    grid-area: whoseTurn;
+  }
+}
