@@ -2,6 +2,30 @@ body {
   background-color: #14bdac;
 }
 
+.opponentsNickname {
+  grid-area: opponentsNickname;
+}
+
+.board {
+  grid-area: board;
+}
+
+.playerSymbol {
+  grid-area: playerSymbol;
+}
+
+.whoseTurn {
+  grid-area: whoseTurn;
+}
+
+.score {
+  grid-area: score;
+}
+
+.gameId {
+  grid-area: gameId;
+}
+
 @media (max-width: 767px) {
   .grid-container {
     display: grid;
@@ -10,40 +34,219 @@ body {
     gap: 1px 1px;
     grid-template-areas: ". . ." "playerSymbol playerSymbol playerSymbol" ". . ." "opponentsNickname opponentsNickname opponentsNickname" ". . ." "board board board" "board board board" ". . ." "whoseTurn whoseTurn whoseTurn" ". . ." "score score score" ". . ." "gameId gameId gameId";
 
-    width: 95vw;
-    height: 90vh;
+    width: 98vw;
+    height: 95vh;
     justify-items: center;
-  }
-
-  .board {
-    grid-area: board;
+    font-family: "Jost";
+    color: white;
   }
   .board td {
     width: 30vw;
     height: 30vw;
-    border: 1.5px solid white;
+    border: 2px solid white;
     padding: 0;
   }
   .board table {
     border-spacing: 0px;
   }
   .score {
-    grid-area: score;
+    font-size: 25vmin;
   }
 
   .playerSymbol {
-    grid-area: playerSymbol;
+    font-size: 10vmin;
+  }
+  .playerSymbol div {
+    display: inline;
+    justify-content: center;
+    align-items: center;
   }
 
   .gameId {
-    grid-area: gameId;
+    font-size: 5vmin;
   }
 
   .opponentsNickname {
-    grid-area: opponentsNickname;
+    font-size: 7.5vmin;
   }
 
   .whoseTurn {
-    grid-area: whoseTurn;
+    font-size: 10vmin;
+  }
+}
+@media (min-width: 668px) and (max-width: 899px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr 0.9fr;
+    grid-template-rows: 0.8fr 3vh 5fr 0fr 9vmax 1vh 0.7fr;
+    gap: 1px 1px;
+    grid-template-areas: ". opponentsNickname ." ". . ." "whoseTurn board playerSymbol" ". . ." ". score ." ". . ." ". gameId .";
+
+    width: 98vw;
+    height: 95vh;
+    justify-items: center;
+    font-family: "Jost";
+    color: white;
+  }
+  .board td {
+    width: 18vw;
+    height: 18vw;
+    border: 2px solid white;
+    padding: 0;
+  }
+  .board table {
+    border-spacing: 0px;
+  }
+  .score {
+    font-size: 15vmax;
+    line-height: 10vmax;
+  }
+
+  .playerSymbol {
+    font-size: 7vmax;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .playerSymbol div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gameId {
+    font-size: 4vmax;
+    bottom: 0;
+  }
+
+  .opponentsNickname {
+    font-size: 5vmax;
+  }
+
+  .whoseTurn {
+    font-size: 5vmax;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr 0.9fr;
+    grid-template-rows: 0.8fr 3vh 5fr 0fr 9vmax 1vh 0.7fr;
+    gap: 1px 1px;
+    grid-template-areas: ". opponentsNickname ." ". . ." "whoseTurn board playerSymbol" ". . ." ". score ." ". . ." ". gameId .";
+
+    width: 98vw;
+    height: 95vh;
+    justify-items: center;
+    font-family: "Jost";
+    color: white;
+  }
+  .board td {
+    width: 15vw;
+    height: 15vw;
+    border: 2px solid white;
+    padding: 0;
+  }
+  .board table {
+    border-spacing: 0px;
+  }
+  .score {
+    font-size: 12vmax;
+    line-height: 10vmax;
+  }
+
+  .playerSymbol {
+    font-size: 7vmax;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .playerSymbol div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gameId {
+    font-size: 2vmax;
+    bottom: 0;
+  }
+
+  .opponentsNickname {
+    font-size: 5vmax;
+  }
+
+  .whoseTurn {
+    font-size: 5vmax;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1301px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr 0.9fr;
+    grid-template-rows: 0.8fr 3vh 5fr 0fr 9vmax 1vh 0.7fr;
+    gap: 1px 1px;
+    grid-template-areas: ". opponentsNickname ." ". . ." "whoseTurn board playerSymbol" ". . ." ". score ." ". . ." ". gameId .";
+
+    width: 98vw;
+    height: 95vh;
+    justify-items: center;
+    font-family: "Jost";
+    color: white;
+  }
+  .board td {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid white;
+    padding: 0;
+  }
+  .board table {
+    border-spacing: 0px;
+  }
+  .score {
+    font-size: 8vmax;
+    line-height: 9vmax;
+  }
+
+  .playerSymbol {
+    font-size: 7vmax;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .playerSymbol div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gameId {
+    font-size: 2vmax;
+    bottom: 0;
+  }
+
+  .opponentsNickname {
+    font-size: 3.5vmax;
+  }
+
+  .whoseTurn {
+    font-size: 5vmax;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
