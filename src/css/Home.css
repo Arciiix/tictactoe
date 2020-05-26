@@ -4,6 +4,7 @@ body {
 
 .opponentsNickname {
   grid-area: opponentsNickname;
+  text-align: center;
 }
 
 .board {
